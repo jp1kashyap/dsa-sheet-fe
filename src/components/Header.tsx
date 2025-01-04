@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 const Header: React.FC = () => {
 const userName=localStorage.getItem("userName")
-const navigate=useNavigate();
 const logout = ()=> {
     localStorage.clear();
     window.location.reload();

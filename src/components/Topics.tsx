@@ -15,20 +15,21 @@ const Topics:React.FC=()=> {
     setTopics(result.data.data);
     }
     
-    const fetchProgress = async ()=> {
-        try{
-            const result = await api.get("/progress");
-            const completed = result.data.progress.map((prog:IProgress)=>prog.completed ? prog.topicId : '');
-            setProgress(completed);
-            }catch(error){
-                if (axios.isAxiosError(error)) {
-                    toast.error(error.response?.data.message)
-                }
-            }
-            fetchTopics();
-    }
+    
     
     useEffect(()=>{
+        const fetchProgress = async ()=> {
+            try{
+                const result = await api.get("/progress");
+                const completed = result.data.progress.map((prog:IProgress)=>prog.completed ? prog.topicId : '');
+                setProgress(completed);
+                }catch(error){
+                    if (axios.isAxiosError(error)) {
+                        toast.error(error.response?.data.message)
+                    }
+                }
+                fetchTopics();
+        }
         fetchProgress();
     },[])
 
