@@ -31,7 +31,7 @@ const LoginForm: React.FC = () => {
                     toast.success(response?.data.message)
                     localStorage.setItem("token", response.data.token)
                     localStorage.setItem("userName", response.data.name)
-                    navigate('/dashboard');
+                    navigate('/');
                 }
             } catch (error) {
                 console.log("error", error)
