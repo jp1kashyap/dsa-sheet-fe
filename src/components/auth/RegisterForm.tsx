@@ -48,7 +48,6 @@ const RegisterForm: React.FC = () => {
                     navigate('/login');
                 }
             } catch (error) {
-                console.log("error", error)
                 if (axios.isAxiosError(error)) {
                     if (error.response?.data.details) {
                         error.response?.data.details.map((err: { [key: string]: string }) => (

@@ -20,3 +20,72 @@ code {
 .account-link a {
   text-decoration: none;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #04AA6D;
+  color: white;
+  position: relative;
+}
+
+.header-logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon-container img {
+  margin-right: 15px;
+}
+
+.logout {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.container-width {
+  width: 96%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.accordion-header button {
+  background-color: #282a35a8;
+  color: #fff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #04AA6D !important;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-header .progress {
+  width: 400px;
+  position: absolute;
+  right: 60px;
+}
+
+.progress-bar {
+  min-width: 5%;
+}

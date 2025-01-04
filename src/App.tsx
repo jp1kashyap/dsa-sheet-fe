@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import LoginForm from './components/auth/LoginForm';
 import RegisterForm from './components/auth/RegisterForm';
 import { Toaster } from "react-hot-toast";
-import Dashboard from './components/Dashboard';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+const Dashboard = React.lazy(() => import('./components/Dashboard'));
 
 function App() {
   return (

@@ -28,13 +28,14 @@ const LoginForm: React.FC = () => {
             try {
                 const response = await api.post("auth/login", values)
                 if (response.data) {
-                    toast.success(response?.data.message)
                     localStorage.setItem("token", response.data.token)
                     localStorage.setItem("userName", response.data.name)
-                    navigate('/');
+                    if (localStorage.getItem("token")) {
+                        toast.success("User Logged in successfully.")
+                        navigate('/');
+                    }
                 }
             } catch (error) {
-                console.log("error", error)
                 if (axios.isAxiosError(error)) {
                     if (error.response?.data.details) {
                         error.response?.data.details.map((err: { [key: string]: string }) => (
