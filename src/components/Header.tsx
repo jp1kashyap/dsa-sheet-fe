@@ -8,7 +8,7 @@ const logout = ()=> {
   return (
     <header className="header">
       <div className="header-logo">
-        <h1>StudyApp</h1>
+        <h1>DSA Sheet</h1>
       </div>
       <div className="user-icon-container">
         <img
