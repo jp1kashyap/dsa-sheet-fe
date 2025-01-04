@@ -42,9 +42,9 @@ const SubTopics:React.FC<ISubtopicListProps> = ({subtopics,progress,setProgress}
             <tr key={i}>
             <td><input type='checkbox' id={subtopic._id} defaultChecked={progress && progress.includes(subtopic._id)} onChange={(event)=>handleCheck(event,subtopic._id)} /></td>
             <td>{subtopic.title}</td>
-            <td><Link to={subtopic.youtubeLink}>Youtube link</Link></td>
-            <td><Link to={subtopic.leetcodeLink}>Leetcode link</Link></td>
-            <td><Link to={subtopic.articleLink}>Article link</Link></td>
+            <td> {subtopic.youtubeLink && <Link to={subtopic.youtubeLink} target='_blank'>Youtube link</Link> }</td>
+            <td> {subtopic.leetcodeLink && <Link to={subtopic.leetcodeLink} target='_blank'>Leetcode link</Link> }</td>
+            <td> {subtopic.articleLink && <Link to={subtopic.articleLink}target='_blank'>Article link</Link>}</td>
             <td>{subtopic.level}</td>
             </tr>
         ))}
