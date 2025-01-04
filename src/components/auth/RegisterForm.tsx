@@ -66,7 +66,7 @@ const RegisterForm: React.FC = () => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow p-4">
-                        <h3 className="text-center mb-4">Registration Form</h3>
+                        <h3 className="text-center mb-4">User Registration</h3>
                         <form onSubmit={formik.handleSubmit}>
                             {/* Name */}
                             <div className="mb-3">

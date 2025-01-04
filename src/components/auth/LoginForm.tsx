@@ -54,7 +54,7 @@ const LoginForm: React.FC = () => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow p-4">
-                        <h3 className="text-center mb-4">Login Form</h3>
+                        <h3 className="text-center mb-4">User Login</h3>
                         <form onSubmit={formik.handleSubmit}>
                             {/* Email */}
                             <div className="mb-3">

@@ -12,7 +12,7 @@ const logout = ()=> {
       </div>
       <div className="user-icon-container">
         <img
-          src="http://localhost:3000/user.png"
+          src="https://cdn-icons-png.flaticon.com/512/219/219983.png"
           alt="User Icon"
           className="user-icon"
         /> {userName}

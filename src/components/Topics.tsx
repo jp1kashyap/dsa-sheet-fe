@@ -15,8 +15,6 @@ const Topics:React.FC=()=> {
     setTopics(result.data.data);
     }
     
-    
-    
     useEffect(()=>{
         const fetchProgress = async ()=> {
             try{
